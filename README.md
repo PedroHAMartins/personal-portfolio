@@ -2,6 +2,7 @@
 
 Repository for my personal portfolio made with the use of React and Sass.
 
+| :placard: |     |
 | -------------  | --- |
 | :sparkles: Project        | **Portfolio**
 | :label: Technologies | react, sass, html, css
