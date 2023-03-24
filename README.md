@@ -2,9 +2,8 @@
 
 Repository for my personal portfolio made with the use of React and Sass.
 
-| :placard: Vitrine.Dev |     |
 | -------------  | --- |
-| :sparkles: Nome        | **Portfolio**
+| :sparkles: Project        | **Portfolio**
 | :label: Technologies | react, sass, html, css
 
 ![]()
