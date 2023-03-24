@@ -1,0 +1,22 @@
+@use '../abstract/_variables'
+    
+html
+    background-color: variables.$color-background
+    font-family: variables.$montserrat
+
+body
+    -ms-overflow-style: none
+    scrollbar-width: none
+
+    &::-webkit-scrollbar
+        display: none
+
+    .section
+        height: 100dvh
+        text-align: center
+
+        .section__title
+            font-size: 3rem
+            font-weight: 700
+            padding-top: 5%
+            color: variables.$color-white

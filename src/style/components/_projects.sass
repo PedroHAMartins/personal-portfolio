@@ -1,0 +1,34 @@
+@use '../abstract/_variables'
+
+.projects
+
+    h1
+        padding-top: 5%
+
+    .container
+        display: flex
+        flex-direction: row
+        margin: 10% 0
+
+        .project-card
+            border: 2px solid variables.$color-blue
+            border-radius: 5%
+            padding: 5%
+            margin: 0 20%
+
+            a
+                text-decoration: none
+
+                h2
+                    font-size: 1.75em
+                    font-weight: 600
+                    color: variables.$color-blue
+
+                img
+                    border-radius: 5%
+                    margin: 5% 0
+
+                p
+                    color: variables.$color-white
+                    font-size: 1.125em
+                    font-weight: 500

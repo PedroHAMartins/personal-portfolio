@@ -1,0 +1,80 @@
+@use '../abstract/_variables'
+
+.header
+    //background-color: red
+    height: 100dvh
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    margin: 0 10%
+    max-width: 100%
+
+
+    .header__text
+        //background-color: yellow
+        display: flex
+        flex-direction: column
+        color: variables.$color-white
+
+        h1
+            font-size: 3rem
+            font-weight: 700
+            margin-bottom: 1rem
+
+        strong
+            color: variables.$color-blue
+
+        p
+            font-size: 1.2rem
+
+    .header__image
+        max-width: 50% //or maybe 40%
+        border-radius: 67% 32% 68% 26% / 81% 50% 43% 22% // https://9elements.github.io/fancy-border-radius/
+        //box-shadow: 0px 3px 28px -1px rgba(255, 255, 255, 0.438)
+
+
+    .socialmedia-icons
+        display: flex
+        flex-direction: column
+        width: 20%
+        margin-left: 5%
+        gap: 13rem
+
+        .socialmedia-icons__card
+            display: flex
+            flex-direction: row
+            justify-content: left
+            align-items: center
+            gap: 1rem
+            cursor: default
+            text-decoration: none
+
+            &:nth-child(1)
+                margin-left: -85%
+
+            &:nth-child(3)
+                margin-left: -10%
+                
+            &:nth-child(4)
+                margin-left: -100%
+                
+            
+            svg
+                color: variables.$color-white
+                font-size: 2rem
+                cursor: pointer
+
+                &:hover ~ p
+                    display: block
+                    position: relative
+                    
+
+            p
+                position: absolute
+                display: none
+                color: variables.$color-white
+                font-weight: 600
+                    
+
+                
