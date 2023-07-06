@@ -2,6 +2,40 @@
 
 .about
     height: 100dvh
-    background-color: red
     text-align: center
-    padding-top: 4rem
+
+    .about__container
+        margin: 0 10%
+        display: flex
+        flex-direction: row
+
+        .about__container__image
+            position: relative
+            margin: 5% 0
+            max-width: 35%
+            border-radius: 40% 60% 60% 40% / 31% 52% 48% 69%
+            opacity: 0           
+            
+
+        .about__container__image__fade-in
+             animation: 3s fade-in-image
+             opacity: 1
+
+        
+        .about__container__text
+            color: variables.$color-white
+            font-weight: 400
+            font-size: 1.25em
+            margin-top: 10%
+            margin-left: 5%
+
+            p
+                margin-bottom: 2em
+                text-align: justify
+
+                .about__container__text__strong__fade-in
+                    animation: 1.5s fade-in-strong 1s 1 normal forwards, change-color 1.5s 1.60s 1 normal forwards
+                    background-color: none
+                    background: linear-gradient(90deg, variables.$color-lightblue 50%, variables.$color-background 50%)
+                    background-size: 200% 100%
+                    background-position: 100% 0

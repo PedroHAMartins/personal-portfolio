@@ -1,4 +1,7 @@
 @use '../abstract/_variables'
+@use '../abstract/_mixin'
+@include mixin.animations
+
 
 .header
     //background-color: red
@@ -28,10 +31,16 @@
         p
             font-size: 1.2rem
 
+        b
+            color: variables.$color-blue
+
     .header__image
         max-width: 50% //or maybe 40%
         border-radius: 67% 32% 68% 26% / 81% 50% 43% 22% // https://9elements.github.io/fancy-border-radius/
         //box-shadow: 0px 3px 28px -1px rgba(255, 255, 255, 0.438)
+        animation: border-radius-animation 100s infinite linear
+        
+        
 
 
     .socialmedia-icons
@@ -40,6 +49,22 @@
         width: 20%
         margin-left: 5%
         gap: 13rem
+
+        .github_id
+            opacity: 0
+            @include mixin.social-media-fade-in(github_id)
+        
+        .linkedin_id
+            opacity: 0
+            @include mixin.social-media-fade-in(linkedin_id)
+        
+        .instagram_id
+            opacity: 0
+            @include mixin.social-media-fade-in(instagram_id)
+        
+        .facebook_id
+            opacity: 0
+            @include mixin.social-media-fade-in(facebook_id)
 
         .socialmedia-icons__card
             display: flex
@@ -64,11 +89,16 @@
                 color: variables.$color-white
                 font-size: 2rem
                 cursor: pointer
+                transition: all 0.3s ease-in-out
 
-                &:hover ~ p
-                    display: block
-                    position: relative
-                    
+                &:hover
+                    color: variables.$color-blue
+                    transform: scale(1.2)
+
+                    ~ p
+                        display: block
+                        position: relative
+                        animation: text-appear 0.5s ease-in-out
 
             p
                 position: absolute

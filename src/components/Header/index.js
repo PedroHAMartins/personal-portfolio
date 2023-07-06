@@ -4,46 +4,27 @@ import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa
 const Header = () => {
 
     const socialMedia = [
-        {name: "github", icon: <FaGithub />, link: "https://github.com/PedroHAMartins", text: "GitHub"},
-        {name: "linkedin", icon: <FaLinkedinIn />, link: "https://www.linkedin.com/in/opedrohamartins/", text: "LinkedIn"},
-        {name: "instagram", icon : <FaInstagram />, link: "https://www.instagram.com/opedrohamartins/", text: "Instagram"},
-        {name: "facebook", icon: <FaFacebookF />, link: "https://www.facebook.com/pedrohenriquem3", text: "Facebook"}
+        {name: "github", icon: <FaGithub />, link: "https://github.com/PedroHAMartins", text: "GitHub", class:"github_id"},
+        {name: "linkedin", icon: <FaLinkedinIn />, link: "https://www.linkedin.com/in/opedrohamartins/", text: "LinkedIn", class:"linkedin_id"},
+        {name: "instagram", icon : <FaInstagram />, link: "https://www.instagram.com/opedrohamartins/", text: "Instagram", class:"instagram_id"},
+        {name: "facebook", icon: <FaFacebookF />, link: "https://www.facebook.com/pedrohenriquem3", text: "Facebook", class:"facebook_id"}
     ]
 
     return (
-        <header className='header section'>
+        <header className='header section' id='header_id'>
             <div className='header__text'>
                 <h1>Hi, my name is <strong>Pedro!</strong></h1>
-                <p>I'm a <strong>front-end developer</strong> with a lot of passion working with front-end development and designing websites.</p>
+                <p>I'm a <strong>front-end developer</strong> with a lot of passion working with front-end development and designing websites. <b>Let's talk!</b></p>
             </div>
-            <img src="/images/profile_picture.jpg" alt="Pedro Martins" className='header__image'/>
+            <img src="/images/profile_picture.jpg" alt="Pedro Martins profile" className='header__image'/>
 
             <div className='socialmedia-icons'>
                 {socialMedia.map((media) => (
-                    <a href={media.link} rel='noopener noreferrer' target="_blank" className='socialmedia-icons__card'>
+                    <a href={media.link} rel='noopener noreferrer' target="_blank" className={`socialmedia-icons__card ${media.class}`}>
                         {media.icon}<p>{media.text}</p>
                     </a>
                 ))}
             </div>
-
-            {/* <div className='socialmedia-icons'>
-                <div className='socialmedia-icons__card'>
-                    <img src="/images/github.svg" alt="GitHub" />
-                    <a href="/PedroHAMartins">/PedroHAMartins</a>
-                </div>
-                <div className='socialmedia-icons__card'>
-                    <img src="/images/linkedin.svg" alt="LinkedIn" />
-                    <a href="https://www.linkedin.com/in/opedrohamartins/">/opedrohamartins</a>
-                </div>
-                <div className='socialmedia-icons__card'>
-                    <img src="/images/instagram.svg" alt="Instagram" />
-                    <a href="https://www.instagram.com/opedrohamartins/">@opedrohamartins</a>
-                </div>
-                <div className='socialmedia-icons__card'>
-                    <img src="/images/facebook.svg" alt="Facebook" />
-                    <a href="https://www.facebook.com/pedrohenriquem3/">/pedrohenriquem3</a>
-                </div>
-            </div> */}
         </header>
     )
 }

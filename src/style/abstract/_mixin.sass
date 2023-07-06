@@ -1,0 +1,78 @@
+@use '../abstract/_variables'
+
+@mixin animations
+    @keyframes border-radius-animation
+        0%
+            border-radius: 67% 32% 68% 26% / 81% 50% 43% 22%
+
+        25%
+            border-radius: 39% 61% 23% 77% / 30% 34% 66% 70%
+
+        50%
+            border-radius: 68% 32% 88% 12% / 59% 78% 22% 41%
+
+        75%
+            border-radius: 67% 33% 60% 40% / 29% 52% 48% 71%
+
+        100%
+            border-radius: 67% 32% 68% 26% / 81% 50% 43% 22%
+
+    @keyframes text-appear
+        from
+            opacity: 0
+        
+        to
+            opacity: 1
+
+    @keyframes fade-in-strong
+        to
+            background-position: 0 0
+            
+    
+    @keyframes change-color
+        to
+            color: variables.$color-background
+
+    @keyframes fade-in-image
+        0%
+            opacity: 0
+            left: -100%
+        
+        60%
+            opacity: 0
+
+        100%
+            opacity: 1
+            left: 0
+
+@mixin social-media-fade-in($id)
+    $percentage: 0%
+
+    @if $id == 'github_id'
+        $percentage: 25%
+    @else if $id == linkedin_id
+        $percentage: 50%
+    @else if $id == instagram_id
+        $percentage: 75%
+    @else if $id == facebook_id
+        $percentage: 100%
+    @else
+        $percentage: 0%
+    @endif
+
+    @keyframes social-media-fade-in-#{$id}
+        0%
+            opacity: 0
+        #{$percentage}
+            opacity: 1
+        100%
+            opacity: 1
+
+    animation-name: social-media-fade-in-#{$id}
+    animation-duration: 5s
+    animation-fill-mode: forwards
+    animation-delay: 1s
+    
+        
+            
+            

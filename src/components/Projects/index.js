@@ -36,7 +36,7 @@ const Projects = () => {
     ]
 
     return (
-        <section className='projects section'>
+        <section className='projects section' id='projects_id'>
             <h1 className='section__title'>Projects</h1>
             <div className='container'>
                 <Slider personalProjects={personalProjects}/>   
