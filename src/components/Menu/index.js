@@ -10,6 +10,7 @@ const Menu = () => {
         {section: 'About me', link: '#about_id'},
         {section: 'Skills', link: '#skills_id'},
         {section: 'Projects', link: '#projects_id'},
+        {section: 'Contact', link: '#contact_id'}
     ]
 
     const toggleMenu = () => {

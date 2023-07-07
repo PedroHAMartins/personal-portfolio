@@ -24,14 +24,6 @@ const Slider = ({personalProjects}) => {
           </div>
         </SwiperSlide>
       )))}
-      {/* <SwiperSlide>Slide 1</SwiperSlide> */}
-      {/* {personalProjects.map((projects) => (
-          <SwiperSlide className='project-card' key={personalProjects.name}>
-            <h2>{projects.name}</h2>
-            <img src={projects.image} alt={projects.alt} />
-            <p>{projects.description}</p>
-          </SwiperSlide> 
-      ))} */}
     </Swiper>
   );
 };

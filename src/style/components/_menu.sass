@@ -1,10 +1,17 @@
 @use '../abstract/_variables'
+@use '../abstract/_mixin'
+@include mixin.animations
+
     
 .nav
     position: fixed
     margin-left: 30px
     margin-top: 100px
     text-align: center
+    z-index: 2
+    background-color: variables.$color-background
+    border-radius: 20px
+    animation: fade-in 2s
 
     .nav__icon
         color: variables.$color-white
@@ -21,7 +28,7 @@
         flex-direction: column
 
         &__active
-            height: 220px
+            height: 100%
             opacity: 1
 
         &__item

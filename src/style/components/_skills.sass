@@ -1,4 +1,65 @@
 @use '../abstract/_variables'
+@use '../abstract/_mixin'
+@include mixin.animations
 
 .skills
     height: 100dvh
+
+    .skills__container
+        display: grid
+        grid-template-columns: 1fr 1fr
+
+        .skills__container__left
+            width: 100%
+
+            .skills__container__left__text
+                margin: 5% 20em
+                position: relative
+
+                &::after
+                    content: ''
+                    position: absolute
+                    bottom: -3px
+                    left: 0
+                    width: 0
+                    height: 2px
+                    background-color: variables.$color-white
+                    transition: width 0.3s
+
+            .skills__container__left__text__underline
+                animation: text-appear2 2s
+
+                &::after
+                    animation: underline-appear 3s
+                    width: 100%
+                    
+                
+                
+
+            .skill__box
+                display: flex
+                flex-direction: row
+                gap: 1em
+                margin: 1em 2em
+                justify-content: center
+                align-items: center
+            
+            .skill__box skills__container__left__skillsbox
+                display: flex
+                flex-direction: column
+
+
+            p
+                color: variables.$color-white
+                font-size: 1.25em
+                text-align: center
+                text-decoration: none
+
+        .skills__container__right
+
+            p
+                color: variables.$color-white
+                font-size: 1.25em
+                text-align: center
+                text-decoration: none
+                margin-bottom: 5px

@@ -1,4 +1,5 @@
 @use '../abstract/_variables'
+@use '../abstract/_mixin'
     
 html
     background-color: variables.$color-background
@@ -17,7 +18,11 @@ body
         text-align: center
 
         .section__title
+            opacity: 0
             font-size: 3rem
             font-weight: 700
             padding-top: 5%
             color: variables.$color-white
+            
+        .section__title__fade-in
+            animation: title-appear 3s both

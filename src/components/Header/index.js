@@ -1,5 +1,5 @@
-import '../../style/components/_header.sass'
-import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import '../../style/components/_header.sass';
+import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const Header = () => {
 
@@ -13,7 +13,7 @@ const Header = () => {
     return (
         <header className='header section' id='header_id'>
             <div className='header__text'>
-                <h1>Hi, my name is <strong>Pedro!</strong></h1>
+                <h1 className='header__text__title'>Hi, my name is <strong>Pedro!</strong></h1>
                 <p>I'm a <strong>front-end developer</strong> with a lot of passion working with front-end development and designing websites. <b>Let's talk!</b></p>
             </div>
             <img src="/images/profile_picture.jpg" alt="Pedro Martins profile" className='header__image'/>

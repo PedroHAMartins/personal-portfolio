@@ -1,8 +1,13 @@
 import '../../style/components/_projects.sass'
 import Slider from '../../utils/slider.js'
+import { useInView } from 'react-intersection-observer';
 
 
 const Projects = () => {
+
+    const [ref, inView] = useInView({
+        triggerOnce: true
+    })
 
     const personalProjects = [
         {name: "7 days challenge", 
@@ -37,7 +42,7 @@ const Projects = () => {
 
     return (
         <section className='projects section' id='projects_id'>
-            <h1 className='section__title'>Projects</h1>
+            <h1 className={`section__title ${inView ? 'section__title__fade-in' : ''}`} ref={ref}>Projects</h1>
             <div className='container'>
                 <Slider personalProjects={personalProjects}/>   
             </div>

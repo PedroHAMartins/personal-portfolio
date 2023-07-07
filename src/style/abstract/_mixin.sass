@@ -33,7 +33,7 @@
         to
             color: variables.$color-background
 
-    @keyframes fade-in-image
+    @keyframes fade-in-image-about
         0%
             opacity: 0
             left: -100%
@@ -45,10 +45,46 @@
             opacity: 1
             left: 0
 
+    @keyframes fade-in
+        from
+            opacity: 0
+        to
+            opacity: 1
+
+    @keyframes fade-out
+        from
+            opacity: 1
+        to
+            opacity: 0        
+
+    @keyframes title-appear
+        from
+            opacity: 0
+            transform: translateY(-20%)
+        to
+            opacity: 1
+            transform: translateY(0)
+
+    @keyframes text-appear2
+        from
+            opacity: 0
+            transform: translateY(-20%)
+        to
+            opacity: 1
+            transform: translateY(0)
+
+    @keyframes underline-appear
+        from
+            width: 0
+        to
+            width: 100%
+
+
+
 @mixin social-media-fade-in($id)
     $percentage: 0%
 
-    @if $id == 'github_id'
+    @if $id == github_id
         $percentage: 25%
     @else if $id == linkedin_id
         $percentage: 50%
