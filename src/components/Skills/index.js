@@ -135,7 +135,7 @@ const Skills = () => {
                 <p className={`skills__container__right__text ${inViewSubtitle ? 'skills__container__right__text__underline' : ''}`} ref={refSubtitle}>
                     Also
                 </p>
-                <div className="skills__container__left__skillsbox">
+                <div className="skills__container__right__skillsbox">
                     <div className="skill__box">
                         <img src="/images/skills/c.svg" alt="C" />
                         {renderTypeAnimationOrText('C', inViewSkills.C)}

@@ -2,61 +2,121 @@
 @use '../abstract/_mixin'
 @include mixin.animations
 
-    
-.nav
-    position: fixed
-    margin-left: 30px
-    margin-top: 100px
-    text-align: center
-    z-index: 2
-    background-color: variables.$color-background
-    border-radius: 20px
-    animation: fade-in 2s
+@media screen and ( min-width: variables.$breakpoint-large )
+    .nav
+        position: fixed
+        margin-left: 30px
+        margin-top: 100px
+        text-align: center
+        z-index: 2
+        background-color: variables.$color-background
+        border-radius: 20px
+        animation: fade-in 2s
 
-    .nav__icon
-        color: variables.$color-white
-        margin-bottom: 10px
-        font-size: 2em
-        cursor: pointer
-
-    .nav__menu
-        height: 0
-        opacity: 0
-        overflow: hidden
-        transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out
-        display: flex
-        flex-direction: column
-
-        &__active
-            height: 100%
-            opacity: 1
-
-        &__item
-            text-decoration: none
-            padding: 10px
+        .nav__icon
             color: variables.$color-white
-            margin-bottom: 20px
-            position: relative
-            transition: color 0.3s ease-in-out
+            margin-bottom: 10px
+            font-size: 2em
+            cursor: pointer
 
-            &:visited
+        .nav__menu
+            height: 0
+            opacity: 0
+            overflow: hidden
+            transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out
+            display: flex
+            flex-direction: column
+
+            &__active
+                height: 100%
+                opacity: 1
+
+            &__item
+                text-decoration: none
+                padding: 10px
                 color: variables.$color-white
+                margin-bottom: 20px
+                position: relative
+                transition: color 0.3s ease-in-out
 
-            &::after
-                content: ''
-                position: absolute
-                bottom: 0
-                left: 0
-                width: 100%
-                height: 2px
-                background-color: variables.$color-white
-                transform: scaleX(0)
-                transform-origin: left
-                transition: transform 0.3s ease-in-out
+                &:visited
+                    color: variables.$color-white
 
-            &:hover
-                color: variables.$color-blue
+                &::after
+                    content: ''
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    width: 100%
+                    height: 2px
+                    background-color: variables.$color-white
+                    transform: scaleX(0)
+                    transform-origin: left
+                    transition: transform 0.3s ease-in-out
 
-            &:hover::after
-                transform: scaleX(1)
+                &:hover
+                    color: variables.$color-blue
 
+                &:hover::after
+                    transform: scaleX(1)
+
+@media screen and ( max-width: variables.$breakpoint-small )
+
+    .nav
+        position: fixed
+        margin: 30px
+        z-index: 2
+        width: 40%
+        padding: 20px
+        border-radius: 20px
+        animation: fade-in 2s
+        -webkit-backface-visibility: hidden
+
+        .nav__icon
+            color: variables.$color-white
+            margin-bottom: 10px
+            font-size: 2em
+            cursor: pointer
+
+        .nav__menu
+            height: 0
+            opacity: 0
+            overflow: hidden
+            transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out
+            display: flex
+            flex-direction: column
+            background-color: variables.$color-background
+            border-radius: 20px
+
+            &__active
+                height: 100%
+                opacity: 1
+
+            &__item
+                text-decoration: none
+                padding: 10px
+                color: variables.$color-white
+                margin-bottom: 20px
+                position: relative
+                transition: color 0.3s ease-in-out
+
+                &:visited
+                    color: variables.$color-white
+
+                &::after
+                    content: ''
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    width: 100%
+                    height: 2px
+                    background-color: variables.$color-white
+                    transform: scaleX(0)
+                    transform-origin: left
+                    transition: transform 0.3s ease-in-out
+
+                &:hover
+                    color: variables.$color-blue          
+
+                &:hover::after
+                    transform: scaleX(1)

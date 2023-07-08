@@ -2,104 +2,216 @@
 @use '../abstract/_mixin'
 @include mixin.animations
 
-.skills
-    height: 100dvh
+@media screen and ( min-width: variables.$breakpoint-large )
+    .skills
+        height: 100dvh
 
-    .skills__container
-        display: flex
-        flex-direction: row
-        width: 100%
-
-        .skills__container__right
+        .skills__container
             display: flex
-            flex-direction: column
+            flex-direction: row
             width: 100%
 
-            p
-                color: variables.$color-white
-                font-size: 1.25em
-                text-align: center
-                text-decoration: none
-                margin-bottom: 5px
-
-            .skills__container__right__text
-                margin: 5% 20em
-                position: relative
-
-                &::after
-                    content: ''
-                    position: absolute
-                    bottom: -3px
-                    left: 0
-                    width: 0
-                    height: 2px
-                    background-color: variables.$color-white
-                    transition: width 0.3s
-
-            .skills__container__right__text__underline
-                animation: text-appear2 2s
-
-                &::after
-                    animation: underline-appear 3s
-                    width: 100%
-
-            .skill__box
-                display: flex
-                flex-direction: row
-                gap: 1em
-                margin: 1em 2em
-                justify-content: center
-                align-items: center
-            
-            .skill__box skills__container__left__skillsbox
+            .skills__container__right
                 display: flex
                 flex-direction: column
+                width: 100%
 
-        .skills__container__left
-            display: flex
-            flex-direction: column
-            width: 100%
-            justify-content: center
+                p
+                    color: variables.$color-white
+                    font-size: 1.25em
+                    text-align: center
+                    text-decoration: none
+                    margin-bottom: 5px
 
-            .skills__container__left__text
-                margin: 5% 20em
-                position: relative
+                .skills__container__right__text
+                    margin: 5% 20em
+                    position: relative
 
-                &::after
-                    content: ''
-                    position: absolute
-                    bottom: -3px
-                    left: 0
-                    width: 0
-                    height: 2px
-                    background-color: variables.$color-white
-                    transition: width 0.3s
+                    &::after
+                        content: ''
+                        position: absolute
+                        bottom: -3px
+                        left: 0
+                        width: 0
+                        height: 2px
+                        background-color: variables.$color-white
+                        transition: width 0.3s
 
-            .skills__container__left__text__underline
-                animation: text-appear2 2s
+                .skills__container__right__text__underline
+                    animation: text-appear2 2s
 
-                &::after
-                    animation: underline-appear 3s
-                    width: 100%
+                    &::after
+                        animation: underline-appear 3s
+                        width: 100%
+
+                .skill__box
+                    display: flex
+                    flex-direction: row
+                    gap: 1em
+                    margin: 1em 2em
+                    justify-content: center
+                    align-items: center
+                
+                .skill__box skills__container__left__skillsbox
+                    display: flex
+                    flex-direction: column
+
+            .skills__container__left
+                display: flex
+                flex-direction: column
+                width: 100%
+                justify-content: center
+
+                .skills__container__left__text
+                    margin: 5% 20em
+                    position: relative
+
+                    &::after
+                        content: ''
+                        position: absolute
+                        bottom: -3px
+                        left: 0
+                        width: 0
+                        height: 2px
+                        background-color: variables.$color-white
+                        transition: width 0.3s
+
+                .skills__container__left__text__underline
+                    animation: text-appear2 2s
+
+                    &::after
+                        animation: underline-appear 3s
+                        width: 100%
+                        
                     
+                    
+
+                .skill__box
+                    display: flex
+                    flex-direction: row
+                    gap: 1em
+                    margin: 1em 2em
+                    justify-content: center
+                    align-items: center
                 
+                .skill__box skills__container__left__skillsbox
+                    display: flex
+                    flex-direction: column
+
+
+                p
+                    color: variables.$color-white
+                    font-size: 1.25em
+                    text-align: center
+                    text-decoration: none
+
+@media screen and ( max-width: variables.$breakpoint-small )
+
+    .skills
+        height: 100dvh
+
+        .skills__container
+            display: flex
+            flex-direction: column
+            width: 100%
+
+            .skills__container__right
+                display: flex
+                flex-flow: row wrap
+                justify-content: space-between
+                width: 100%
+                margin-top: 2em
+
+                p
+                    color: variables.$color-white
+                    font-size: 1.1em
+                    text-align: center
+                    text-decoration: none
+                    margin-bottom: 5px
+
+                .skills__container__right__text
+                    margin: 5% 43%
+                    position: relative
+                    width: 100%
+
+
+                    &::after
+                        content: ''
+                        position: absolute
+                        bottom: -3px
+                        left: 0
+                        width: 0
+                        height: 2px
+                        background-color: variables.$color-white
+                        transition: width 0.3s
+
+                .skills__container__right__text__underline
+                    animation: text-appear2 2s
+
+                    &::after
+                        animation: underline-appear 3s
+                        width: 100%
+
+                .skill__box
+                    display: flex
+                    flex-direction: row
+                    gap: 0.5em
+                    align-items: center
                 
+                .skills__container__right__skillsbox
+                    margin: 1em
+                    display: flex
+                    flex-flow: row wrap
+                    width: 100%
+                    gap: 1em
+                    justify-content: space-evenly
 
-            .skill__box
+            .skills__container__left
                 display: flex
-                flex-direction: row
-                gap: 1em
-                margin: 1em 2em
-                justify-content: center
-                align-items: center
-            
-            .skill__box skills__container__left__skillsbox
-                display: flex
-                flex-direction: column
+                flex-flow: row wrap
+                width: 100%
+                margin-top: 2em
+
+                .skills__container__left__text
+                    margin: 5% 35%
+                    position: relative
+                    width: 100%
+
+                    &::after
+                        content: ''
+                        position: absolute
+                        bottom: -3px
+                        left: 0
+                        width: 0
+                        height: 2px
+                        background-color: variables.$color-white
+                        transition: width 0.3s
+
+                .skills__container__left__text__underline
+                    animation: text-appear2 2s
+
+                    &::after
+                        animation: underline-appear 3s
+                        width: 100%
+                        
+                    
+                    
+
+                .skill__box
+                    display: flex
+                    flex-direction: row
+                    gap: 0.5em
+                    align-items: center
+                
+                .skills__container__left__skillsbox
+                    display: flex
+                    flex-flow: row wrap
+                    width: 100%
+                    justify-content: space-evenly
 
 
-            p
-                color: variables.$color-white
-                font-size: 1.25em
-                text-align: center
-                text-decoration: none
+                p
+                    color: variables.$color-white
+                    font-size: 1em
+                    text-align: center
+                    text-decoration: none

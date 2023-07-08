@@ -2,112 +2,205 @@
 @use '../abstract/_mixin'
 @include mixin.animations
 
-.header
-    //background-color: red
-    height: 100dvh
-    display: flex
-    flex-direction: row
-    justify-content: center
-    align-items: center
-    margin: 0 10%
-    max-width: 100%
-
-
-    .header__text
-        //background-color: yellow
+@media screen and ( min-width: variables.$breakpoint-large )
+    .header
+        //background-color: red
+        height: 100dvh
         display: flex
-        flex-direction: column
-        color: variables.$color-white
-            
-
-        h1
-            font-size: 3rem
-            font-weight: 700
-            margin-bottom: 1rem
-            animation: title-appear 3s both
-
-        strong
-            color: variables.$color-blue
-
-        p
-            font-size: 1.2rem
-            animation: text-appear2 3s both
-            animation-delay: 0.5s
-
-        b
-            color: variables.$color-blue
-
-    .header__image
-        max-width: 50% //or maybe 40%
-        border-radius: 67% 32% 68% 26% / 81% 50% 43% 22% // https://9elements.github.io/fancy-border-radius/
-        //box-shadow: 0px 3px 28px -1px rgba(255, 255, 255, 0.438)
-        animation: border-radius-animation 100s infinite linear, fade-in 4s
-        
-        
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        margin: 0 10%
+        max-width: 100%
 
 
-    .socialmedia-icons
-        display: flex
-        flex-direction: column
-        width: 20%
-        margin-left: 5%
-        gap: 13rem
-
-        .github_id
-            opacity: 0
-            @include mixin.social-media-fade-in(github_id)
-        
-        .linkedin_id
-            opacity: 0
-            @include mixin.social-media-fade-in(linkedin_id)
-        
-        .instagram_id
-            opacity: 0
-            @include mixin.social-media-fade-in(instagram_id)
-        
-        .facebook_id
-            opacity: 0
-            @include mixin.social-media-fade-in(facebook_id)
-
-        .socialmedia-icons__card
+        .header__text
+            //background-color: yellow
             display: flex
-            flex-direction: row
-            justify-content: left
-            align-items: center
-            gap: 1rem
-            cursor: default
-            text-decoration: none
-
-            &:nth-child(1)
-                margin-left: -85%
-
-            &:nth-child(3)
-                margin-left: -10%
+            flex-direction: column
+            color: variables.$color-white
                 
-            &:nth-child(4)
-                margin-left: -100%
-                
-            
-            svg
-                color: variables.$color-white
-                font-size: 2rem
-                cursor: pointer
-                transition: all 0.3s ease-in-out
 
-                &:hover
-                    color: variables.$color-blue
-                    transform: scale(1.2)
+            h1
+                font-size: 3rem
+                font-weight: 700
+                margin-bottom: 1rem
+                animation: title-appear 3s both
 
-                    ~ p
-                        display: block
-                        position: relative
-                        animation: text-appear 0.5s ease-in-out
+            strong
+                color: variables.$color-blue
 
             p
-                position: absolute
-                display: none
-                color: variables.$color-white
-                font-weight: 600
-                    
+                font-size: 1.2rem
+                animation: text-appear2 3s both
+                animation-delay: 0.5s
 
+            b
+                color: variables.$color-blue
+
+        .header__image
+            max-width: 50% //or maybe 40%
+            border-radius: 67% 32% 68% 26% / 81% 50% 43% 22% // https://9elements.github.io/fancy-border-radius/
+            //box-shadow: 0px 3px 28px -1px rgba(255, 255, 255, 0.438)
+            animation: border-radius-animation 100s infinite linear, fade-in 4s
+            
+            
+
+
+        .socialmedia-icons
+            display: flex
+            flex-direction: column
+            width: 20%
+            margin-left: 5%
+            gap: 13rem
+
+            .github_id
+                opacity: 0
+                @include mixin.social-media-fade-in(github_id)
+            
+            .linkedin_id
+                opacity: 0
+                @include mixin.social-media-fade-in(linkedin_id)
+            
+            .instagram_id
+                opacity: 0
+                @include mixin.social-media-fade-in(instagram_id)
+            
+            .facebook_id
+                opacity: 0
+                @include mixin.social-media-fade-in(facebook_id)
+
+            .socialmedia-icons__card
+                display: flex
+                flex-direction: row
+                justify-content: left
+                align-items: center
+                gap: 1rem
+                cursor: default
+                text-decoration: none
+
+                &:nth-child(1)
+                    margin-left: -85%
+
+                &:nth-child(3)
+                    margin-left: -10%
+                    
+                &:nth-child(4)
+                    margin-left: -100%
+                    
                 
+                svg
+                    color: variables.$color-white
+                    font-size: 2rem
+                    cursor: pointer
+                    transition: all 0.3s ease-in-out
+
+                    &:hover
+                        color: variables.$color-blue
+                        transform: scale(1.2)
+
+                        ~ p
+                            display: block
+                            position: relative
+                            animation: text-appear 0.5s ease-in-out
+
+                p
+                    position: absolute
+                    display: none
+                    color: variables.$color-white
+                    font-weight: 600
+                    
+@media screen and ( max-width: variables.$breakpoint-small )
+
+    .header
+        height: 100dvh
+        display: flex
+        flex-direction: column
+        width: 100%
+        align-items: center
+
+
+        .header__text
+            //background-color: yellow
+            display: flex
+            flex-direction: column
+            color: variables.$color-white
+                
+
+            h1
+                font-size: 3rem
+                font-weight: 700
+                margin: 7rem 1rem 3rem 1rem
+                animation: title-appear 3s both
+
+            strong
+                color: variables.$color-blue
+
+            p
+                font-size: 1.2rem
+                animation: text-appear2 3s both
+                animation-delay: 0.5s
+                margin-bottom: 1rem
+                margin: 0rem 1rem 1rem 1rem
+
+            b
+                color: variables.$color-blue
+
+        .header__image
+            max-width: 60% //or maybe 40%
+            border-radius: 67% 32% 68% 26% / 81% 50% 43% 22% // https://9elements.github.io/fancy-border-radius/
+            //box-shadow: 0px 3px 28px -1px rgba(255, 255, 255, 0.438)
+            animation: border-radius-animation 100s infinite linear, fade-in 4s
+            
+            
+
+
+        .socialmedia-icons
+            display: flex
+            flex-direction: row
+            margin-top: 1.2rem
+            gap: 3.5rem
+
+            .github_id
+                opacity: 0
+                @include mixin.social-media-fade-in(github_id)
+            
+            .linkedin_id
+                opacity: 0
+                @include mixin.social-media-fade-in(linkedin_id)
+            
+            .instagram_id
+                opacity: 0
+                @include mixin.social-media-fade-in(instagram_id)
+            
+            .facebook_id
+                opacity: 0
+                @include mixin.social-media-fade-in(facebook_id)
+
+            .socialmedia-icons__card
+                display: flex
+                flex-direction: row
+                cursor: default
+                text-decoration: none
+                    
+                
+                svg
+                    color: variables.$color-white
+                    font-size: 2rem
+                    cursor: pointer
+                    transition: all 0.3s ease-in-out
+
+                    &:hover
+                        color: variables.$color-blue
+                        transform: scale(1.2)
+
+                        ~ p
+                            display: block
+                            position: relative
+                            animation: text-appear 0.5s ease-in-out
+
+                p
+                    position: absolute
+                    display: none
+                    color: variables.$color-white
+                    font-weight: 600            

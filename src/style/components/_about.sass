@@ -1,45 +1,89 @@
 @use '../abstract/_variables'
 
-.about
-    height: 100dvh
-    text-align: center
+@media screen and ( min-width: variables.$breakpoint-large )
+    .about
+        height: 100dvh
+        text-align: center
 
-    .about__container
-        margin: 0 10%
-        display: flex
-        flex-direction: row
+        .about__container
+            margin: 0 10%
+            display: flex
+            flex-direction: row
 
-        .about__container__image
-            position: relative
-            margin: 5% 0
-            max-width: 35%
-            border-radius: 40% 60% 60% 40% / 31% 52% 48% 69%
-            opacity: 0           
+            .about__container__image
+                position: relative
+                margin: 5% 0
+                max-width: 35%
+                border-radius: 40% 60% 60% 40% / 31% 52% 48% 69%
+                opacity: 0           
+                
+
+            .about__container__image__fade-in
+                animation: 3s fade-in-image-about
+                opacity: 1
+
             
+            .about__container__text__fade-in
+                animation: text-appear 3s both
 
-        .about__container__image__fade-in
-             animation: 3s fade-in-image-about
-             opacity: 1
+            .about__container__text
+                opacity: 0
+                color: variables.$color-white
+                font-weight: 400
+                font-size: 1.25em
+                margin-top: 10%
+                margin-left: 5%
 
-        
-        .about__container__text__fade-in
-            animation: text-appear 3s both
+                p
+                    margin-bottom: 2em
+                    text-align: justify
 
-        .about__container__text
-            opacity: 0
-            color: variables.$color-white
-            font-weight: 400
-            font-size: 1.25em
-            margin-top: 10%
-            margin-left: 5%
+                    .about__container__text__strong__fade-in
+                        animation: 1.5s fade-in-strong 1s 1 normal forwards, change-color 1.5s 1.60s 1 normal forwards
+                        background-color: none
+                        background: linear-gradient(90deg, variables.$color-lightblue 50%, variables.$color-background 50%)
+                        background-size: 200% 100%
+                        background-position: 100% 0
 
-            p
-                margin-bottom: 2em
-                text-align: justify
+@media screen and ( max-width: variables.$breakpoint-small )
 
-                .about__container__text__strong__fade-in
-                    animation: 1.5s fade-in-strong 1s 1 normal forwards, change-color 1.5s 1.60s 1 normal forwards
-                    background-color: none
-                    background: linear-gradient(90deg, variables.$color-lightblue 50%, variables.$color-background 50%)
-                    background-size: 200% 100%
-                    background-position: 100% 0
+    .about
+        height: 100dvh
+        width: 100%
+        text-align: center
+
+        .about__container
+            margin: 0 10%
+            display: flex
+            flex-direction: column
+
+            .about__container__image
+                display: none     
+                
+
+            .about__container__image__fade-in
+                animation: 3s fade-in-image-about
+                opacity: 1
+
+            
+            .about__container__text__fade-in
+                animation: text-appear 3s both
+
+            .about__container__text
+                opacity: 0
+                color: variables.$color-white
+                font-weight: 400
+                font-size: 1.15em
+                margin-top: 10%
+                margin-left: 5%
+
+                p
+                    margin-bottom: 1em
+                    text-align: justify
+
+                    .about__container__text__strong__fade-in
+                        animation: 1.5s fade-in-strong 1s 1 normal forwards, change-color 1.5s 1.60s 1 normal forwards
+                        background-color: none
+                        background: linear-gradient(90deg, variables.$color-lightblue 50%, variables.$color-background 50%)
+                        background-size: 200% 100%
+                        background-position: 100% 0

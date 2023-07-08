@@ -1,34 +1,76 @@
 @use '../abstract/_variables'
 
-.projects
+@media screen and ( min-width: variables.$breakpoint-large )
 
-    h1
-        padding-top: 5%
+    .projects
 
-    .container
-        display: flex
-        flex-direction: row
-        margin: 10% 0
+        h1
+            padding-top: 5%
 
-        .project-card
-            border: 2px solid variables.$color-blue
-            border-radius: 5%
-            padding: 5%
-            margin: 0 20%
+        .container
+            display: flex
+            flex-direction: row
+            margin: 10% 0
 
-            a
-                text-decoration: none
+            .project-card
+                border: 2px solid variables.$color-blue
+                border-radius: 5%
+                padding: 5%
+                margin: 0 20%
 
-                h2
-                    font-size: 1.75em
-                    font-weight: 600
-                    color: variables.$color-blue
+                a
+                    text-decoration: none
 
-                img
-                    border-radius: 5%
-                    margin: 5% 0
+                    h2
+                        font-size: 1.75em
+                        font-weight: 600
+                        color: variables.$color-blue
 
-                p
-                    color: variables.$color-white
-                    font-size: 1.125em
-                    font-weight: 500
+                    img
+                        border-radius: 5%
+                        margin: 5% 0
+
+                    p
+                        color: variables.$color-white
+                        font-size: 1.125em
+                        font-weight: 500
+
+@media screen and ( max-width: variables.$breakpoint-small )
+
+    .projects
+
+        h1
+            padding-top: 5%
+
+        .projects__text
+            text-align: center
+            color: variables.$color-white
+            font-weight: 400
+            margin-top: 15%
+
+        .container
+            display: flex
+            flex-direction: row
+            margin: 10% 5% 10% 5% 
+
+            .project-card
+                border: 2px solid variables.$color-blue
+                border-radius: 5%
+                padding: 5%
+
+                a
+                    text-decoration: none
+
+                    h2
+                        font-size: 1.75em
+                        font-weight: 600
+                        color: variables.$color-blue
+
+                    img
+                        border-radius: 5%
+                        margin: 5% 0
+
+                    p
+                        color: variables.$color-white
+                        font-size: 1.125em
+                        font-weight: 500
