@@ -6,8 +6,6 @@ import { useMediaQuery } from 'react-responsive';
 
 const Projects = () => {
 
-    const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
-
     const [ref, inView] = useInView({
         triggerOnce: true
     })
@@ -43,7 +41,6 @@ const Projects = () => {
         }       
     ]
 
-    if(isMobile){
         return (
             <section className='projects section' id='projects_id'>
                 <h1 className={`section__title ${inView ? 'section__title__fade-in' : ''}`} ref={ref}>Projects</h1>
@@ -53,16 +50,6 @@ const Projects = () => {
                 </div>
             </section>
         )
-    }
-
-    if(!isMobile){
-        <section className='projects section' id='projects_id'>
-            <h1 className={`section__title ${inView ? 'section__title__fade-in' : ''}`} ref={ref}>Projects</h1>
-            <div className='container'>
-                <Slider personalProjects={personalProjects}/>   
-            </div>
-        </section>
-    }
 }
 
 export default Projects

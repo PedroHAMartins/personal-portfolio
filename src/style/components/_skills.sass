@@ -2,7 +2,7 @@
 @use '../abstract/_mixin'
 @include mixin.animations
 
-@media screen and ( min-width: variables.$breakpoint-small )
+@media screen and ( min-width: variables.$breakpoint-large )
     .skills
         height: 100dvh
 
@@ -24,7 +24,7 @@
                     margin-bottom: 5px
 
                 .skills__container__right__text
-                    margin: 5% 20em
+                    margin: 5% 45%
                     position: relative
 
                     &::after
@@ -63,7 +63,7 @@
                 justify-content: center
 
                 .skills__container__left__text
-                    margin: 5% 20em
+                    margin: 5% 42%
                     position: relative
 
                     &::after
@@ -105,10 +105,11 @@
                     text-align: center
                     text-decoration: none
 
-@media screen and ( max-width: variables.$breakpoint-small )
+@media screen and ( max-width: variables.$breakpoint-large )
 
     .skills
         height: 100dvh
+        width: 100%
 
         .skills__container
             display: flex

@@ -8,7 +8,7 @@ import '../style/components/_projects.sass'
 
 const Slider = ({personalProjects}) => {
 
-  const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 2000px)' });
 
   if (isMobile) {
     return (

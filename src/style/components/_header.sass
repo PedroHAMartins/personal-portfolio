@@ -2,7 +2,8 @@
 @use '../abstract/_mixin'
 @include mixin.animations
 
-@media screen and ( min-width: variables.$breakpoint-small )
+
+@media screen and ( min-width: variables.$breakpoint-large )
     .header
         //background-color: red
         height: 100dvh
@@ -110,7 +111,7 @@
                     color: variables.$color-white
                     font-weight: 600
                     
-@media screen and ( max-width: variables.$breakpoint-small )
+@media screen and ( max-width: variables.$breakpoint-large )
 
     .header
         height: 100dvh
@@ -203,4 +204,11 @@
                     position: absolute
                     display: none
                     color: variables.$color-white
-                    font-weight: 600            
+                    font-weight: 600       
+
+@media screen and ( min-width: 850px ) and ( max-width: 1200px )
+    
+    .header
+
+        .header__image
+            max-width: 40%     

@@ -1,16 +1,23 @@
 @use '../abstract/_variables'
 
-@media screen and ( min-width: variables.$breakpoint-small )
+@media screen and ( min-width: variables.$breakpoint-large )
 
     .projects
 
         h1
             padding-top: 5%
 
+        .projects__text
+            text-align: center
+            color: variables.$color-white
+            font-weight: 400
+            margin-top: 5%
+
         .container
             display: flex
             flex-direction: row
-            margin: 10% 0
+            margin: 2% 0
+
 
             .project-card
                 border: 2px solid variables.$color-blue
@@ -35,7 +42,7 @@
                         font-size: 1.125em
                         font-weight: 500
 
-@media screen and ( max-width: variables.$breakpoint-small )
+@media screen and ( max-width: variables.$breakpoint-large )
 
     .projects
 
@@ -74,3 +81,10 @@
                         color: variables.$color-white
                         font-size: 1.125em
                         font-weight: 500
+
+@media screen and ( min-width: 930px ) and (max-width: 1199px )
+
+    .projects
+
+        .container
+            margin: 5% 10% 0% 10%
