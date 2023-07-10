@@ -38,6 +38,13 @@ const Projects = () => {
         alt: "Organo project image",
         description:"First project made with the use of React while studying it, also has the use of Sass",
         link: "https://organo-beta-indol.vercel.app"
+        },
+        {
+        name: " React Calculator",
+        image: "/images/projects/calculator.png",
+        alt: "Calculator project image",
+        description: "Simple calculator made with the use of React and Sass for study purposes",
+        link: "https://calculator-iota-blue-90.vercel.app"
         }       
     ]
 
