@@ -1,81 +1,62 @@
-# Portfolio
+# Personal Portfolio
 
-Repository for my personal portfolio made with the use of React and Sass.
+This is my personal portfolio website, showcasing my skills, projects, and experience.
 
-|  |     |
-| -------------  | --- |
-| :sparkles: Project        | **Portfolio**
-| :label: Technologies | react, sass, html, css
+## Table of Contents
 
-![]()
+- [Overview](#overview)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Getting Started with Create React App
+## Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My personal portfolio is a website designed to provide an overview of my skills, projects, and experience to potential employers and clients. It is built using [React](https://reactjs.org/) and [Sass](https://sass-lang.com/) to create a modern and responsive user interface.
 
-### Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+- React
+- Sass
+- HTML
+- CSS
+- JavaScript
 
-#### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Home section with a brief introduction and profile picture.
+- Skills section showcasing my technical skills.
+- Projects section highlighting my completed projects.
+- Experience section outlining my work experience.
+- Contact section with a contact form for inquiries.
+- Responsive design for optimal viewing on different devices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-#### `npm test`
+To run the portfolio website locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository: `git clone https://github.com/PedroHAMartins/personal-portfolio`
+2. Navigate to the project directory: `cd personal-portfolio`
+3. Install the dependencies: `npm install`
 
-#### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Start the development server: `npm start`
+2. Open your browser and visit: `http://localhost:3000`
+3. Explore the different sections of the portfolio website.
+4. Customize the content and styling to fit your needs.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The portfolio website can be deployed to various hosting platforms, such as [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/), by following their respective deployment instructions.
 
-#### `npm run eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Contributions to the portfolio website are welcome. If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-### Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-#### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-#### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-#### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-#### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-#### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-#### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](LICENSE).

@@ -45,6 +45,13 @@ const Projects = () => {
         alt: "Calculator project image",
         description: "Simple calculator made with the use of React and Sass for study purposes",
         link: "https://calculator-iota-blue-90.vercel.app"
+        },
+        {
+        name: "To-do List",
+        image: "/images/projects/to_do_list.png",
+        alt: "To-do list project image",
+        description: "To-do list made with the use of React and Sass for study purposes",
+        link: "https://github.com/PedroHAMartins/to-do-list"
         }       
     ]
 
