@@ -51,7 +51,7 @@ const Projects = () => {
         image: "/images/projects/to_do_list.png",
         alt: "To-do list project image",
         description: "To-do list made with the use of React and Sass for study purposes",
-        link: "to-do-list-j5b494jl2-pedrohamartins.vercel.app"
+        link: "https://to-do-list-j5b494jl2-pedrohamartins.vercel.app"
         }       
     ]
 
